@@ -1,6 +1,6 @@
 import { ShoppingCart } from "lucide-react";
 
-const Main = ({ expert }) => {
+const Main = ({ expert, handleCart }) => {
   return (
     <div className="bg-gray-200 p-2 relative rounded-md min-h-96">
       <div className="flex justify-center">
@@ -19,9 +19,12 @@ const Main = ({ expert }) => {
         <b>Address:</b> {expert.address}
       </p>
       <p>
-        <b>Salary:</b> {expert.salary}
+        <b>Salary:</b> ${expert.salary}
       </p>
-      <button className="w-full absolute bottom-2 left-0 right-0 mt-2 p-2 rounded cursor-pointer bg-blue-500 text-white hover:bg-blue-600">
+      <button
+        onClick={() => handleCart(expert.id)}
+        className="w-full absolute bottom-2 left-0 right-0 mt-2 p-2 rounded cursor-pointer bg-blue-500 text-white hover:bg-blue-600"
+      >
         <b className="flex items-center gap-2 justify-center">
           <ShoppingCart /> Add to cart
         </b>
