@@ -8,7 +8,7 @@ function App() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch("../public/expert.json")
+    fetch("/expert.json")
       .then((res) => res.json())
       .then((data) => setExperts(data));
   }, []);
