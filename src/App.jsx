@@ -1,10 +1,10 @@
+import Header from "./components/Header/Header";
+
 function App() {
   return (
-    <>
-      <div>
-        <h1 className="text-2xl">Hello World!</h1>
-      </div>
-    </>
+    <div className="max-w-[1400px] mx-auto p-3 md:p-8">
+      <Header />
+    </div>
   );
 }
 
